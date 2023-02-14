@@ -8,19 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var passwordConfirmation: String = ""
+    @State private var showPassword: Bool = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            VStack(spacing: 8){
+                Text("Username")
+                    .padding(.trailing, 265)
+                
+                TextField("Your username", text: $email)
+                    .padding()
+                    .keyboardType(.numberPad)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.gray, lineWidth: 1)
+                    }
+            }
+            .padding()
         }
-        .padding()
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }

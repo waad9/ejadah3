@@ -14,6 +14,8 @@
 		4AC57F6C299A18F80003AFB5 /* signup9Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC57F6B299A18F80003AFB5 /* signup9Tests.swift */; };
 		4AC57F76299A18F80003AFB5 /* signup9UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC57F75299A18F80003AFB5 /* signup9UITests.swift */; };
 		4AC57F78299A18F80003AFB5 /* signup9UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC57F77299A18F80003AFB5 /* signup9UITestsLaunchTests.swift */; };
+		4AC57F85299B61830003AFB5 /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AC57F84299B61820003AFB5 /* GoogleService-Info (2).plist */; };
+		4AC57F88299B632C0003AFB5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4AC57F87299B632C0003AFB5 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		4AC57F71299A18F80003AFB5 /* signup9UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signup9UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC57F75299A18F80003AFB5 /* signup9UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup9UITests.swift; sourceTree = "<group>"; };
 		4AC57F77299A18F80003AFB5 /* signup9UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup9UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AC57F84299B61820003AFB5 /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC57F88299B632C0003AFB5 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 			children = (
 				4AC57F5A299A18F70003AFB5 /* signup9App.swift */,
 				4AC57F5C299A18F70003AFB5 /* ContentView.swift */,
+				4AC57F84299B61820003AFB5 /* GoogleService-Info (2).plist */,
 				4AC57F5E299A18F80003AFB5 /* Assets.xcassets */,
 				4AC57F60299A18F80003AFB5 /* Preview Content */,
 			);
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = signup9;
+			packageProductDependencies = (
+				4AC57F87299B632C0003AFB5 /* FirebaseAuth */,
+			);
 			productName = signup9;
 			productReference = 4AC57F57299A18F70003AFB5 /* signup9.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 4AC57F4E299A18F70003AFB5;
+			packageReferences = (
+				4AC57F86299B632C0003AFB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 4AC57F58299A18F70003AFB5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC57F62299A18F80003AFB5 /* Preview Assets.xcassets in Resources */,
+				4AC57F85299B61830003AFB5 /* GoogleService-Info (2).plist in Resources */,
 				4AC57F5F299A18F80003AFB5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4AC57F86299B632C0003AFB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4AC57F87299B632C0003AFB5 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AC57F86299B632C0003AFB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4AC57F4F299A18F70003AFB5 /* Project object */;
 }
